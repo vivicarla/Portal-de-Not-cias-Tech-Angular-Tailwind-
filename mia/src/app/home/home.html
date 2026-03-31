@@ -1,0 +1,37 @@
+<main>
+    <div class="bg-slate-600/10">
+        <header class="text-center md:text-left px-6 pt-16 pb-10 max-w-6xl mx-auto w-full"  >
+           
+            <h2 class="text-4xl md:text-5xl font-extrabold text-slate-700 leading-tight">
+                Bem-vindo ao <span class="text-slate-900">Portal</span> de Notícias Tech
+            </h2>
+
+            <p class="mt-4 text-lg text-slate-600 max-w-xl">
+                Conheça algumas tecnologias que estão moldando o futuro da tecnologia e fique por dentro das últimas
+                tendências e inovações do mundo tech.
+            </p>
+
+        </header>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-2 pb-16 max-w-6xl mx-auto w-full">
+
+            <article *ngFor="let item of requisicao"
+                class="group bg-white/90 backdrop-blur-md rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 p-6 border border-slate-200 hover:-translate-y-2 hover:scale-[1.02]">
+
+                <div class="flex flex-col gap-4">
+
+                    <h3 class="text-xl font-bold text-slate-800 group-hover:text-blue-500 transition">
+                        {{item.noticia}}
+                    </h3>
+                    <div class="w-12 h-1 bg-blue-500 rounded-full group-hover:w-16 transition-all duration-300"></div>
+
+                    <!-- Descrição dinâmica -->
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        {{item.descricao}}
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
+</main>
